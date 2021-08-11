@@ -4,6 +4,7 @@
     font-family: 'Tangerine', cursive;
     font-weight: bolder;
     font-size: 70px;
+    font-weight: 800;
     color: brown;
 }
 
@@ -14,29 +15,21 @@
 .body {
   /*background-image: url("images/table3.jpg");*/
   height: auto;
+  background-color: lightgoldenrodyellow;
 }
 
 .bg {
-   /* The image used */ 
-   /* Full height */
-   /*height: auto;*/
-   width: 100%;
-  height: 1900px;
-   /* Center and scale the image nicely */
-   background-position: center;
-   background-repeat: no-repeat;
-   background-size: contain;
-   filter: blur(10px);
-  
-  
-  /*background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-attachment: fixed;
-  height: 100%;
-  width: fit-content;
-  filter: blur(8px);*/
-  
+ /* The image used */ 
+ /* Full height */
+ /*height: auto;*/
+ width: 100%;
+ position: static;
+ height: 1900px;
+ /* Center and scale the image nicely */
+ background-position: center;
+ background-repeat: no-repeat;
+ background-size: contain;
+ filter: blur(10px);
 }
 /*navbar*/
 
@@ -77,8 +70,13 @@ ul {
     background-color: #331a00;
   }
 
+  .heading {
+    text-align: center;
+  }
+
+  
   .para {
-   position: fixed;
+   position: absolute;
    text-align:  justify;
    padding: 45px;
    border-radius: 10px;
@@ -88,9 +86,39 @@ ul {
    border: 3px solid lightgray;
    font-family: "Comfortaa", cursive;
    width: 800px;
-   height: 400px;
+   height: 1400px;
    opacity: .75;
    top: 35%;
    left: 25%;
   
   }  
+
+  /*BEGIN PORTFOLIO CSS*/
+
+  .pbg {
+    background-color: lightgoldenrodyellow;
+  }
+
+  #hl {
+    margin-top: 10px;
+    border-radius: 10px;
+    width: 100%;
+  }
+
+  #th {
+    border-radius: 10px;
+    width: 100%;
+  }
+
+  #hp {
+    border-radius: 10px;
+    width: 100%;
+  }
+
+  .imgcap {
+    text-align: center;
+    font-family: "Comfortaa", cursive;
+    padding: 13px;
+    font-size: 20px;
+    background-color: white;
+  }

@@ -1,101 +1,87 @@
+/*BEGIN HOME CSS*/
 
-.main {
-    text-align: center;
-    font-family: 'Tangerine', cursive;
-    font-weight: bolder;
-    font-size: 70px;
-    font-weight: 800;
-    color: brown;
+body {
+  background-image: url(images/table4blur.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
-.p {
-    border: 30px;
-    border-color: white;
-}
-.body {
-  /*background-image: url("images/table3.jpg");*/
-  height: auto;
-  background-color: lightgoldenrodyellow;
-}
-
-.bg {
- /* The image used */ 
- /* Full height */
- /*height: auto;*/
- width: 100%;
- position: static;
- height: 1900px;
- /* Center and scale the image nicely */
- background-position: center;
- background-repeat: no-repeat;
- background-size: contain;
- filter: blur(10px);
-}
-/*navbar*/
-
-.swirl {
-  float: right;
-  margin-right: 10px;
-  margin-top: 6px;
-  height: 50px;
-  display: flex;
-}
-
+/*Navbar*/
 ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    background-color: #663300;
-    border-radius: 10px;
-    text-align: center;
-  }
-    li {
-    float: left;
-  }
-  
-  li a {
-    display: block;
-    color: white;
-    text-align: center;
-    padding: 20px 15px;
-    text-decoration: none;
-    margin-left: 20px;
-    font-size: 20px;
-    font-family:'Comfortaa', cursive;
-  }
-  
-  /* Change the link color to #331a00 (black) on hover */
-  li a:hover {
-    background-color: #331a00;
-  }
+  list-style-type: none;
+  margin: 0;
+  padding-left: 38%;
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  font-family: Comfortaa;
+  font-size: 20px;
+}
 
-  .heading {
-    text-align: center;
-  }
+li {
+  float: left;
+}
 
-  
-  .para {
-   position: absolute;
-   text-align:  justify;
-   padding: 45px;
-   border-radius: 10px;
-   word-spacing: 0.5px;
-   line-height: 20px;
-   background-color: lightgray;
-   border: 3px solid lightgray;
-   font-family: "Comfortaa", cursive;
-   width: 800px;
-   height: 1400px;
-   opacity: .75;
-   top: 35%;
-   left: 25%;
-  
-  }  
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+}
+/*end Navbar*/
 
-  /*BEGIN PORTFOLIO CSS*/
+.name {
+  color: white;
+  text-align: center;
+  font-family: Comfortaa;
+  font-size: 70px;
+  font-weight: 900;
+  padding-top: 10%;
+  position: absbolute;
+  backdrop-filter: blur(50px);
+}
 
-  .pbg {
+
+hr {
+  color: white;
+  size: 1px;
+}
+
+.caption {
+  color: white;
+  text-align: center;
+  font-family: Comfortaa;
+  font-size: 30px;
+  font-weight: lighter;
+  white-space: pre;
+  padding-top: 10px;
+}
+
+.contact {
+  color: white;
+  text-align: center;
+  font-family: Comfortaa;
+  font-size: 20px;
+  font-weight: lighter;
+  white-space: pre;
+  padding-top: 0px;
+}
+
+footer {
+  text-align: center;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  color: gainsboro;
+  padding-top: 375px;
+}
+
+
+
+
+/*BEGIN PORTFOLIO CSS*/
+
+ /* .pbg {
     background-color: lightgoldenrodyellow;
   }
 
@@ -122,3 +108,7 @@ ul {
     font-size: 20px;
     background-color: white;
   }
+
+
+  /*  height: auto;
+  background-color: lightgoldenrodyellow;*/

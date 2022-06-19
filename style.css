@@ -10,18 +10,18 @@ body {
 /*Navbar*/
 ul {
   list-style-type: none;
-  margin: 0;
-  padding-left: 38%;
   overflow: hidden;
-  position: fixed;
-  top: 0;
-  width: 100%;
+  position: sticky;
   font-family: Comfortaa;
   font-size: 20px;
+  display: flex;
+  list-style-type: none;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 
 li {
-  float: left;
+  float: center;
 }
 
 li a {
@@ -32,83 +32,56 @@ li a {
 }
 /*end Navbar*/
 
-.name {
+#name {
   color: white;
   text-align: center;
   font-family: Comfortaa;
   font-size: 70px;
   font-weight: 900;
-  padding-top: 10%;
-  position: absbolute;
-  backdrop-filter: blur(50px);
+  padding-top: 200px;
+  justify-content: center;
 }
 
 
-hr {
+.hr {
   color: white;
   size: 1px;
 }
 
 .caption {
+  padding-top: 30px;
   color: white;
-  text-align: center;
+  list-style-type: none;
+  overflow: hidden;
+  position: sticky;
+  width: 100%;
   font-family: Comfortaa;
-  font-size: 30px;
-  font-weight: lighter;
-  white-space: pre;
-  padding-top: 10px;
+  font-size: 35px;
+  display: flex;
+  list-style-type: none;
+  justify-content: center;
+  flex-wrap: wrap;
+
 }
 
 .contact {
+  white-space: pre;
   color: white;
-  text-align: center;
+  list-style-type: none;
+  overflow: hidden;
+  position: sticky;
   font-family: Comfortaa;
   font-size: 20px;
-  font-weight: lighter;
-  white-space: pre;
-  padding-top: 0px;
+  display: flex;
+  list-style-type: none;
+  justify-content: center;
+  flex-wrap: wrap;
 }
+
 
 footer {
   text-align: center;
   font-family: Georgia, 'Times New Roman', Times, serif;
   color: gainsboro;
-  padding-top: 375px;
+  padding-top: 250px;
 }
-
-
-
-
-/*BEGIN PORTFOLIO CSS*/
-
- /* .pbg {
-    background-color: lightgoldenrodyellow;
-  }
-
-  #hl {
-    margin-top: 10px;
-    border-radius: 10px;
-    width: 100%;
-  }
-
-  #th {
-    border-radius: 10px;
-    width: 100%;
-  }
-
-  #hp {
-    border-radius: 10px;
-    width: 100%;
-  }
-
-  .imgcap {
-    text-align: center;
-    font-family: "Comfortaa", cursive;
-    padding: 13px;
-    font-size: 20px;
-    background-color: white;
-  }
-
-
-  /*  height: auto;
-  background-color: lightgoldenrodyellow;*/

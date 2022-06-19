@@ -1,0 +1,49 @@
+body {
+    background-image: url(images/table4blur.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+h1 {
+    color: white;
+    text-align: left;
+    font-family: Comfortaa;
+    font-size: 30px;
+    font-weight: 900;
+    white-space: pre;
+}
+
+  
+.hr {
+  color: white;
+  size: 1px;
+}
+
+/*Navbar*/
+ul {
+  list-style-type: none;
+  text-align: center;
+  overflow: hidden;
+  position: sticky;
+  width: 100%;
+  font-family: Comfortaa;
+  font-size: 20px;
+  display: flex;
+  list-style-type: none;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+  
+  li {
+    float: center;
+  }
+  
+  li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+  }
+  /*end Navbar*/
+  

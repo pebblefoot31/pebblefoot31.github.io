@@ -66,6 +66,7 @@ li a {
 
 .contact {
   white-space: pre;
+  padding-top: 30px;
   color: white;
   list-style-type: none;
   overflow: hidden;

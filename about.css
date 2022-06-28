@@ -1,5 +1,5 @@
     body {
-    background-image: url(images/table4blur.jpg);
+    background-image: url(images/hennabg.jpg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -58,8 +58,8 @@
   }
 
   #prof {
-    width: 250px;
-    height: 250px;
+    width: 230px;
+    height: 390px;
     float: left;
     margin: 15px;
     border-radius: 15px;
@@ -70,8 +70,7 @@
   #pone {
     text-align: left;
     font-family: Comfortaa;
-    font-size: 25px;
-    font-weight: 900;
+    font-size: 20px;
     color: white;
     line-height: 32px;
     padding-left: 300px;
@@ -82,7 +81,7 @@
     #art {
     color: white;
     text-align: left;
-    padding-top: 400px;
+    padding-top: 350px;
     padding-left: 300px;
     font-family: Comfortaa;
     font-weight: 1000;
@@ -90,8 +89,8 @@
   }
 
   #pictwo {
-    width: 300px;
-    height: 250px;
+    width: 250px;
+    height: 410px;
     float: right;
     margin: 15px;
     border-radius: 15px;
@@ -99,7 +98,7 @@
   }
 
   #hennapic {
-    width: 400px;
+    width: 240px;
     height: 400px;
     float: left;
     margin: 15px;
@@ -122,8 +121,7 @@
   .ptwo {
     text-align: left;
     font-family: Comfortaa;
-    font-size: 25px;
-    font-weight: 900;
+    font-size: 20px;
     color: white;
     line-height: 32px;
     padding-left: 300px;

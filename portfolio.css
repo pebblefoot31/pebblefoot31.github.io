@@ -1,5 +1,5 @@
 body {
-    background-image: url(images/table4blur.jpg);
+    background-image: url(images/hennapurpleflowers.jpg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -46,4 +46,9 @@ ul {
     padding: 14px 16px;
   }
   /*end Navbar*/
-  
+
+  footer {
+    text-align: center;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: gainsboro;
+    }

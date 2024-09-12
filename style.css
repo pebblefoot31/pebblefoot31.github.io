@@ -1,7 +1,8 @@
 /*BEGIN HOME CSS*/
 
 body {
-  background-image: url(images/table4blur.jpg);
+  /*background-image: url(images/table4blur.jpg);*/
+  background-color: brown;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -42,7 +43,6 @@ li a {
   justify-content: center;
 }
 
-
 .hr {
   color: white;
   size: 1px;
@@ -61,7 +61,6 @@ li a {
   list-style-type: none;
   justify-content: center;
   flex-wrap: wrap;
-
 }
 
 .contact {
@@ -79,10 +78,9 @@ li a {
   flex-wrap: wrap;
 }
 
-
 footer {
   text-align: center;
-  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-family: Georgia, "Times New Roman", Times, serif;
   color: gainsboro;
   padding-top: 250px;
 }

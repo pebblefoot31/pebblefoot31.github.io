@@ -1,45 +1,18 @@
-/*BEGIN HOME CSS*/
+/* BEGIN HOME CSS */
 
 body {
-  /*background-image: url(images/table4blur.jpg);*/
-  background-color: brown;
+  background-color: rgb(44, 83, 44);
   background-position: center;
-  background-repeat: no-repeat;
   background-size: cover;
 }
 
-/*Navbar*/
-ul {
-  list-style-type: none;
-  overflow: hidden;
-  position: sticky;
-  font-family: Comfortaa;
-  font-size: 20px;
-  display: flex;
-  list-style-type: none;
-  justify-content: center;
-  flex-wrap: wrap;
-}
-
-li {
-  float: center;
-}
-
-li a {
-  display: block;
-  color: white;
-  text-align: center;
-  padding: 14px 16px;
-}
-/*end Navbar*/
-
+/*NAME*/
 #name {
   color: white;
   text-align: center;
-  font-family: Comfortaa;
-  font-size: 70px;
-  font-weight: 900;
-  padding-top: 200px;
+  font-family: Urbanist;
+  font-size: 50px;
+  font-weight: lighter;
   justify-content: center;
 }
 
@@ -48,39 +21,108 @@ li a {
   size: 1px;
 }
 
+/* NAVBAR */
+.navbar {
+  background-color: rgba(0, 0, 0, 0.116); /* background color for visibility */
+  padding: 8px 0;
+}
+
+/*POSITIONING AND FORMATTING OF NAVBAR ITEMS*/
+.navbar ul {
+  list-style-type: none; /* no bullet points */
+  padding: 0;
+  margin: 0;
+  display: flex; /* Use flexbox for layout */
+  justify-content: center; /* Center items */
+  flex-wrap: wrap; /* enable wrapping */
+}
+
+.navbar li {
+  position: relative;
+  margin: 0 15px; /* Space between items */
+}
+
+.navbar li a {
+  display: block;
+  font-family: "Urbanist";
+  font-size: 20px;
+  color: white; /* Text color */
+  text-align: center;
+  padding: 10px 16px; /* Spacing around links */
+  text-decoration: none; /* Remove underline from links */
+  transition: color 0.3s; /* Smooth transition for hover effect */
+}
+
+.navbar li a:hover {
+  color: lightgreen;
+}
+
+.navbar li a::after {
+  content: ""; /* Required for the pseudo-element */
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 2px;
+  background-color: lightgreen; /* Color of the underline */
+  transform: scaleX(0); /* Start with no width */
+  transition: transform 0.3s ease; /* Smooth transition for the width */
+}
+
+.navbar li a:hover::after {
+  transform: scaleX(1); /* Expand to full width on hover */
+}
+
+/*DECOR*/
+#decorational-flowers {
+  display: block; /* Necessary for margin auto to work */
+  margin: 50px auto; /* Centers the image */
+  width: 20%;
+  height: auto;
+}
+
+/*LARGE CAPTION*/
 .caption {
   padding-top: 30px;
   color: white;
-  list-style-type: none;
-  overflow: hidden;
-  position: sticky;
-  width: 100%;
-  font-family: Comfortaa;
+  font-weight: lighter;
+  font-family: "Urbanist";
   font-size: 35px;
   display: flex;
-  list-style-type: none;
+  text-align: center;
   justify-content: center;
   flex-wrap: wrap;
+}
+
+/*SHORT DESCRIPTION OF ME*/
+#short-description {
+  color: whitesmoke;
+  font-weight: light;
+  font-family: "Urbanist";
+  font-size: 15px;
+  text-align: justify;
+  max-width: 600px; /* Set the maximum width for the container */
+  padding: 20px; /* Add padding for space inside */
+  margin: 0 auto; /* Center the container on the page */
+  background-color: rgba(36, 67, 36, 0.319);
+  box-shadow: 6px 6px 10px rgba(0, 0, 0, 0.1);
+  line-height: 1.75; /* for readability */
 }
 
 .contact {
   white-space: pre;
   padding-top: 30px;
   color: white;
-  list-style-type: none;
-  overflow: hidden;
-  position: sticky;
-  font-family: Comfortaa;
+  font-family: "Urbanist";
   font-size: 20px;
   display: flex;
-  list-style-type: none;
   justify-content: center;
   flex-wrap: wrap;
 }
 
 footer {
   text-align: center;
-  font-family: Georgia, "Times New Roman", Times, serif;
+  font-family: "Urbanist";
   color: gainsboro;
-  padding-top: 250px;
+  padding-top: 20rem;
 }

@@ -1,61 +1,124 @@
+/* BEGIN HOME CSS */
+
 body {
-  background: rgb(44, 83, 44);
+  background-color: rgb(44, 83, 44);
   background-position: center;
-  background-repeat: no-repeat;
   background-size: cover;
 }
 
-.name {
+/*NAME*/
+#name {
   color: white;
-  font-family: Comfortaa;
-  font-size: 30px;
-  font-weight: 900;
-  white-space: pre;
-}
-
-/*Navbar*/
-#navi {
-  list-style-type: none;
   text-align: center;
-  overflow: hidden;
-  position: sticky;
-  width: 100%;
-  font-family: Comfortaa;
-  font-size: 20px;
-  display: flex;
-  list-style-type: none;
+  font-family: Urbanist;
+  font-size: 50px;
+  font-weight: lighter;
   justify-content: center;
-  flex-wrap: wrap;
 }
-
-li {
-  float: center;
-}
-
-li a {
-  display: block;
-  color: white;
-  text-align: center;
-  padding: 14px 16px;
-}
-/*end Navbar*/
 
 .hr {
   color: white;
   size: 1px;
 }
 
-ul {
-  list-style-type: none;
-  font-family: Comfortaa;
-  font-size: 20px;
-  font-weight: bolder;
-  text-align: left;
+/* NAVBAR */
+.navbar {
+  background-color: rgba(0, 0, 0, 0.116); /* background color for visibility */
+  padding: 8px 0;
 }
 
+/*POSITIONING AND FORMATTING OF NAVBAR ITEMS*/
+.navbar ul {
+  list-style-type: none; /* no bullet points */
+  padding: 0;
+  margin: 0;
+  display: flex; /* Use flexbox for layout */
+  justify-content: center; /* Center items */
+  flex-wrap: wrap; /* enable wrapping */
+}
+
+.navbar li {
+  position: relative;
+  margin: 0 15px; /* Space between items */
+}
+
+.navbar li a {
+  display: block;
+  font-family: "Urbanist";
+  font-size: 20px;
+  color: white; /* Text color */
+  text-align: center;
+  padding: 10px 16px; /* Spacing around links */
+  text-decoration: none; /* Remove underline from links */
+  transition: color 0.3s; /* Smooth transition for hover effect */
+}
+
+.navbar li a:hover {
+  color: lightgreen;
+}
+
+.navbar li a::after {
+  content: ""; /* Required for the pseudo-element */
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 2px;
+  background-color: lightgreen; /* Color of the underline */
+  transform: scaleX(0); /* Start with no width */
+  transition: transform 0.3s ease; /* Smooth transition for the width */
+}
+
+.navbar li a:hover::after {
+  transform: scaleX(1); /* Expand to full width on hover */
+}
+
+/*BLOG FORMATTING*/
+.blog-content {
+  max-width: 700px;
+  margin: 30px auto;
+}
+
+.blog-content article {
+  background-color: rgba(36, 67, 36, 0.319);
+  box-shadow: 6px 6px 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin-bottom: 20px;
+  transition: background-color 0.5s;
+}
+
+.blog-content article:hover {
+  background-color: rgb(36, 67, 36);
+}
+
+article h2 {
+  color: rgb(136, 238, 150);
+  font-family: "Urbanist";
+  font-size: 24px;
+  text-align: center;
+}
+article h3 {
+  color: rgb(134, 206, 144);
+  font-family: "Urbanist";
+  font-size: 24px;
+  text-align: center;
+  font-weight: lighter;
+}
+
+article p {
+  color: rgb(176, 172, 172);
+  font-family: "Urbanist";
+  font-weight: light;
+  font-size: 20px;
+  text-align: justify;
+  padding: 8px;
+  line-height: 1.75;
+}
+
+/* FOOTER */
 footer {
   text-align: center;
-  font-family: Georgia, "Times New Roman", Times, serif;
+  font-family: "Urbanist";
   color: gainsboro;
-  padding-top: 1000px;
+  padding-top: 20rem;
 }

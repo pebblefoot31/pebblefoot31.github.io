@@ -116,6 +116,17 @@ body {
 
 /*TROUBLESHOOT*/
 /*BLOG TEXT*/
+#blog-post {
+  color: whitesmoke;
+  font-family: "Urbanist";
+  text-align: left;
+  justify-content: center;
+  line-height: 20px;
+  max-width: 800px;
+  padding-top: 50px;
+  padding-left: 25%;
+  padding-right: 25%;
+}
 
 /* FOOTER */
 footer {

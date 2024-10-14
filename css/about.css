@@ -1,138 +1,165 @@
-    body {
-    background-image: url(images/hennabg.jpg);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-  }
-  
-  .name {
-    color: white;
-    text-align: left;
-    font-family: Comfortaa;
-    font-size: 30px;
-    font-weight: 900;
-    white-space: pre;
+body {
+  background-color: rgb(44, 83, 44);
+  background-position: center;
+  background-size: cover;
 }
 
-  /*Navbar*/
-  ul {
-    list-style-type: none;
-    text-align: center;
-    overflow: hidden;
-    position: sticky;
-    width: 100%;
-    font-family: Comfortaa;
-    font-size: 20px;
-    display: flex;
-    list-style-type: none;
-    justify-content: center;
-    flex-wrap: wrap;
-  }
-  
-  li {
-    float: center;   
-  }
-  
-  li a {
-    display: block;
-    color: white;
-    text-align: center;
-    padding: 14px 16px;
-  }
-  /*end Navbar*/
+/*NAME*/
+#name {
+  color: white;
+  text-align: center;
+  font-family: Urbanist;
+  font-size: 50px;
+  font-weight: lighter;
+  justify-content: center;
+}
 
-  
-  .hr {
-    color: white;
-    size: 1px;
-  }
+.hr {
+  color: white;
+  size: 1px;
+}
 
-  #who {
-    color: white;
-    text-align: left;
-    padding-top: 20px;
-    padding-left: 300px;
-    font-family: Comfortaa;
-    font-weight: 1000;
-    font-size: 40px;
-  }
+/* NAVBAR */
+.navbar {
+  background-color: rgba(0, 0, 0, 0.116); /* background color for visibility */
+  padding: 8px 0;
+}
 
-  #prof {
-    width: 230px;
-    height: 390px;
-    float: left;
-    margin: 15px;
-    border-radius: 15px;
-    border-color: white;
-    
-  }
-  
-  #pone {
-    text-align: left;
-    font-family: Comfortaa;
-    font-size: 20px;
-    color: white;
-    line-height: 32px;
-    padding-left: 300px;
-    padding-right: 300px;
-    float: right;
-  }
+/*POSITIONING AND FORMATTING OF NAVBAR ITEMS*/
+.navbar ul {
+  list-style-type: none; /* no bullet points */
+  padding: 0;
+  margin: 0;
+  display: flex; /* Use flexbox for layout */
+  justify-content: center; /* Center items */
+  flex-wrap: wrap; /* enable wrapping */
+}
 
-    #art {
-    color: white;
-    text-align: left;
-    padding-top: 350px;
-    padding-left: 300px;
-    font-family: Comfortaa;
-    font-weight: 1000;
-    font-size: 40px;
-  }
+.navbar li {
+  position: relative;
+  margin: 0 15px; /* Space between items */
+}
 
-  #pictwo {
-    width: 250px;
-    height: 410px;
-    float: right;
-    margin: 15px;
-    border-radius: 15px;
-    border-color: white;
-  }
+.navbar li a {
+  display: block;
+  font-family: "Urbanist";
+  font-size: 20px;
+  color: white; /* Text color */
+  text-align: center;
+  padding: 10px 16px; /* Spacing around links */
+  text-decoration: none; /* Remove underline from links */
+  transition: color 0.3s; /* Smooth transition for hover effect */
+}
 
-  #hennapic {
-    width: 240px;
-    height: 400px;
-    float: left;
-    margin: 15px;
-    border-radius: 15px;
-    border-color: white;
-  }
+.navbar li a:hover {
+  color: lightgreen;
+}
 
-  #line {
-    text-align: left;
-    font-family: Comfortaa;
-    font-size: 25px;
-    font-weight: 1000;
-    color: white;
-    line-height: 32px;
-    padding-left: 300px;
-    padding-right: 300px;
-    float: left;
-  }
+.navbar li a::after {
+  content: ""; /* Required for the pseudo-element */
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 2px;
+  background-color: lightgreen; /* Color of the underline */
+  transform: scaleX(0); /* Start with no width */
+  transition: transform 0.3s ease; /* Smooth transition for the width */
+}
 
-  .ptwo {
-    text-align: left;
-    font-family: Comfortaa;
-    font-size: 20px;
-    color: white;
-    line-height: 32px;
-    padding-left: 300px;
-    padding-right: 300px;
-    float: right;
-  }
+.navbar li a:hover::after {
+  transform: scaleX(1); /* Expand to full width on hover */
+}
 
-  footer {
-    text-align: center;
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    color: gainsboro;
-    padding-top: 1000px;
-  }
-  
+.hr {
+  color: white;
+  size: 1px;
+}
+
+.caption {
+  color: white;
+  text-align: left;
+  padding-top: 20px;
+  padding-left: 300px;
+  font-family: "Urbanist";
+  font-weight: 1000;
+  font-size: 40px;
+}
+
+#prof {
+  width: 230px;
+  height: auto;
+  float: left;
+  margin: 15px;
+  border-radius: 15px;
+  border-color: white;
+}
+
+#pone {
+  text-align: left;
+  font-family: "Urbanist";
+  font-size: 20px;
+  color: white;
+  line-height: 32px;
+  padding-left: 300px;
+  padding-right: 300px;
+  float: right;
+}
+
+#art {
+  color: white;
+  text-align: left;
+  padding-top: 350px;
+  padding-left: 300px;
+  font-family: Comfortaa;
+  font-weight: 1000;
+  font-size: 40px;
+}
+
+#pictwo {
+  width: 250px;
+  height: 410px;
+  float: right;
+  margin: 15px;
+  border-radius: 15px;
+  border-color: white;
+}
+
+#hennapic {
+  width: 240px;
+  height: 400px;
+  float: left;
+  margin: 15px;
+  border-radius: 15px;
+  border-color: white;
+}
+
+#line {
+  text-align: left;
+  font-family: Comfortaa;
+  font-size: 25px;
+  font-weight: 1000;
+  color: white;
+  line-height: 32px;
+  padding-left: 300px;
+  padding-right: 300px;
+  float: left;
+}
+
+.ptwo {
+  text-align: left;
+  font-family: Comfortaa;
+  font-size: 20px;
+  color: white;
+  line-height: 32px;
+  padding-left: 300px;
+  padding-right: 300px;
+  float: right;
+}
+
+footer {
+  text-align: center;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  color: gainsboro;
+  padding-top: 1000px;
+}

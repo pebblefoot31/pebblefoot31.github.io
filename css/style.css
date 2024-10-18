@@ -83,9 +83,9 @@ body {
 
 /*LARGE CAPTION*/
 .caption {
-  padding-top: 30px;
-  color: white;
-  font-weight: lighter;
+  padding-top: 20px;
+  color: rgba(255, 255, 255, 0.503);
+  font-weight: light;
   font-family: "Urbanist";
   font-size: 35px;
   display: flex;
@@ -99,9 +99,9 @@ body {
   color: whitesmoke;
   font-weight: light;
   font-family: "Urbanist";
-  font-size: 15px;
+  font-size: 22px;
   text-align: justify;
-  max-width: 600px; /* Set the maximum width for the container */
+  max-width: 800px; /* Set the maximum width for the container */
   padding: 20px; /* Add padding for space inside */
   margin: 0 auto; /* Center the container on the page */
   background-color: rgba(36, 67, 36, 0.319);
@@ -124,5 +124,5 @@ footer {
   text-align: center;
   font-family: "Urbanist";
   color: gainsboro;
-  padding-top: 20rem;
+  padding-top: 10rem;
 }

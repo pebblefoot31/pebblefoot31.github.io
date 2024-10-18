@@ -76,15 +76,33 @@ body {
   size: 1px;
 }
 
-.caption {
-  color: white;
+.focused-section h2 {
+  color: rgba(255, 255, 255, 0.595);
   text-align: left;
-  padding-top: 20px;
-  padding-left: 300px;
   font-family: "Urbanist";
+  font-weight: light;
   font-weight: 1000;
   font-size: 40px;
 }
+
+/* HOBBIES CAPTION */
+
+/* CAREER CAPTION */
+.focused-section {
+  color: whitesmoke;
+  font-weight: light;
+  font-family: "Urbanist";
+  font-size: 22px;
+  text-align: left;
+  max-width: 800px; /* Set the maximum width for the container */
+  padding: 20px; /* Add padding for space inside */
+  margin: 0 auto; /* Center the container on the page */
+  background-color: rgba(36, 67, 36, 0.319);
+  box-shadow: 6px 6px 10px rgba(0, 0, 0, 0.1);
+  line-height: 1.75; /* for readability */
+}
+
+/*
 
 #prof {
   width: 230px;
@@ -132,34 +150,11 @@ body {
   margin: 15px;
   border-radius: 15px;
   border-color: white;
-}
-
-#line {
-  text-align: left;
-  font-family: Comfortaa;
-  font-size: 25px;
-  font-weight: 1000;
-  color: white;
-  line-height: 32px;
-  padding-left: 300px;
-  padding-right: 300px;
-  float: left;
-}
-
-.ptwo {
-  text-align: left;
-  font-family: Comfortaa;
-  font-size: 20px;
-  color: white;
-  line-height: 32px;
-  padding-left: 300px;
-  padding-right: 300px;
-  float: right;
-}
+}*/
 
 footer {
   text-align: center;
   font-family: Georgia, "Times New Roman", Times, serif;
   color: gainsboro;
-  padding-top: 1000px;
+  padding-top: 15rem;
 }

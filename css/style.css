@@ -76,14 +76,14 @@ body {
 /*DECOR*/
 #decorational-flowers {
   display: block; /* Necessary for margin auto to work */
-  margin: 50px auto; /* Centers the image */
-  width: 20%;
+  margin: auto; /* Centers the image */
+  width: 500px;
   height: auto;
 }
 
 /*LARGE CAPTION*/
 .caption {
-  padding-top: 20px;
+  padding-top: 0px;
   color: rgba(255, 255, 255, 0.503);
   font-weight: light;
   font-family: "Urbanist";

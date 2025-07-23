@@ -3,26 +3,21 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Blog</title>
+  <title>Blog Post</title>
   <link rel="stylesheet" href="css/blog.css" />
   <link rel="stylesheet" href="styles.css" />
   <link href="https://fonts.googleapis.com/css2?family=Inter&family=Playfair+Display&display=swap" rel="stylesheet" />
 </head>
 <body>
-  <!-- Navbar -->
   <div id="navbar-container"></div>
+
+  <main class="post-wrapper">
+    <article id="blog-post"></article>
+    <a href="blog.html" class="back-link">← Back to Blog</a>
+  </main>
+
+  <!-- Scripts: content + loader -->
   <script src="js/navbar.js"></script>
-
-  <div class="page-wrapper">
-    <div class="left-line"></div>
-
-    <div class="blog-title">
-      <h1>BLOG</h1>
-    </div>
-
-    <div class="blog-grid">
-      <a href="post.html?id=1" class="blog-card">Blog Title 1</a>
-      <a href="post.html?id=2" class="blog-card">Blog Title 2</a>
-  </div>
+  <script src="js/script.js"></script>
 </body>
 </html>

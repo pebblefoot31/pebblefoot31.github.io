@@ -1,8 +1,7 @@
-console.log("script.js is loaded");
-
 const blogPosts = {
   1: {
     title: "my first internship",
+    date: "ddd",
     content: `SULI at Lawrence Berkeley National Laboratory: 
           "In winter of 2023, I reached out to a research group involved in a project of my interest at my top lab preference through a brief email expressing interest. Soon after, I received a response from their group lead, virtually met with 
             my mentor, and before I knew it- I was booking a flight to California for my first
@@ -33,33 +32,47 @@ const blogPosts = {
   },
   2: {
     title: "how to gym",
+    date: "ddd",
     content: "Under construction. Will be up soon!",
   },
   3: {
     title: "art is life",
+    date: "ddd",
     content: "Under construction. Will be up soon!",
   },
   4: {
     title: "writing emails",
+    date: "ddd",
     content: "Under construction. Will be up soon!",
   },
   5: {
     title: "my first part-time job",
+    date: "ddd",
     content: "Under construction. Will be up soon!",
   },
 };
 
-// Get the post ID from the URL (e.g., ?id=1)
-const urlParams = new URLSearchParams(window.location.search);
-const postId = urlParams.get("id");
-
-// Load the corresponding post content
-if (blogPosts[postId]) {
-  const post = blogPosts[postId];
-  document.getElementById("blog-post").innerHTML = `
-    <h2>${post.title}</h2>
-    <p>${post.content}</p>
-  `;
-} else {
-  document.getElementById("blog-post").innerHTML = `<p>Post not found.</p>`;
+function getQueryParam(param) {
+  const urlParams = new URLSearchParams(window.location.search);
+  return urlParams.get(param);
 }
+
+function loadBlogPost() {
+  const postId = getQueryParam("id");
+
+  const post = blogPosts[postId];
+  const container = document.getElementById("blog-post");
+
+  if (!post) {
+    container.innerHTML = `<p>Post not found.</p>`;
+    return;
+  }
+
+  container.innerHTML = `
+    <h1 class="post-title">${post.title}</h1>
+    <p class="post-date">${post.date}</p>
+    <div class="post-content">${post.content}</div>
+  `;
+}
+
+window.addEventListener("DOMContentLoaded", loadBlogPost);

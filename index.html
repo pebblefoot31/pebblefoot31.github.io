@@ -1,56 +1,46 @@
-<!DOCTYPE html> <!-- This is a comment-->
-<html>
-  <head>    
-      <meta charset = "utf-8">
-        <meta name = "viewport" content = "width = device-width, initial scale=1">
-        <link rel="stylesheet" href="css/style.css">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Miltonian&display=swap" rel="stylesheet">  <!--loading a font called 'Miltonian' from Google Fonts-->
-        <link href="https://fonts.googleapis.com/css2?family=Comfortaa&display=swap" rel="stylesheet"> 
-        <link href="https://fonts.googleapis.com/css2?family=Tangerine:wght@700&display=swap" rel="stylesheet"> 
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-        <title>Nia Homepage</title>
-      </head>
-      
-      <body>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nia Maheshwari Home</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter&family=Playfair+Display&display=swap" rel="stylesheet" />
 
-        <h1 id="name">N i a &nbsp&nbsp M a h e s h w a r i</h1>
-      <hr class="home-hr">
+</head>
+<body>
+  <!-- Navbar -->
+   <div id="navbar-container"></div>
+   <script src="js/navbar.js"?></script>
 
-        <nav class="navbar" role="navigation">
-          <ul>
-              <li><a href="index.html">Home</a></li>
-              <li><a href="blog.html">Blog</a></li>
-            <!--<li><a href="art.html">Art</a></li>-->
-            <!--<li><a href="portfolio.html">Portfolio</a></li>-->
-              <li><a href="about.html">About</a></li>
-          </ul>
-      </nav>
-      
-      <img id = "decorational-flowers" src="images/flowers1.png">
-      
-      <h2 class="caption"><em>Student. &nbsp Programmer. &nbsp Artist. </em></h2>
+  <!-- Main Content -->
+  <div class="hero">
+    <div class="hero-left">
+      <h1>Hi, I'm Nia</h1>
 
-      <p id="short-description">Hi, I'm Nia! Thanks for visiting my website. Currently, I am
-                                a sophomore pursuing a major in computer science at the University
-                                of Tennessee at Knoxville (UTK). See more about my career 
-                                interests/extracurricular involvements under the 'About' tab! Outside of 
-                                school, I like to destress through a gym session or create art pieces
-                                (mediums: color pencils, acrylic paints, oil paints). Check out some of
-                                my favorite pieces under the 'Art' tab! So far, I have lived on 3 
-                                different continents and I look forward to traveling and expanding that 
-                                list. To read more about interesting experiences or random thoughts I 
-                                have had, head over to my blog &nbsp:D</p>
-      <div class="image-area"></div>
-  
+      <div class="intro-captions">
+        <p class="caption">Caption One</p>
+        <p class="caption">Caption Two</p>
+        <p class="caption">Caption Three</p>
+      </div>
 
+      <div class="social-links">
+        <a href="https://linkedin.com/in/yourprofile" target="_blank" rel="noopener" class="social-link">
+          <img src="icons/linkedin.svg" alt="LinkedIn" class="social-icon" /> LinkedIn
+        </a>
+        <a href="https://github.com/yourprofile" target="_blank" rel="noopener" class="social-link">
+          <img src="icons/github.svg" alt="GitHub" class="social-icon" /> GitHub
+        </a>
+        <a href="https://instagram.com/yourprofile" target="_blank" rel="noopener" class="social-link">
+          <img src="icons/instagram.svg" alt="Instagram" class="social-icon" /> Instagram
+        </a>
+      </div>
+    </div>
 
-      <footer>
-          <p><small>Copyright 2024 Nia Maheshwari</small></p>
-      </footer>
-  </body>
-  </html>
+         <div class="hero-right">
+      <div class="ellipse"></div>
+    </div>
+  </div>
+</body>
 </html>

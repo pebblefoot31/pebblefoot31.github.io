@@ -1,137 +1,117 @@
-/* BEGIN HOME CSS */
-
 body {
-  background-color: rgb(44, 83, 44);
-  background-position: center;
-  background-size: cover;
+  background-color: #D9D9D9;
+  /* font-family: 'Inter', sans-serif; */
 }
 
-/*NAME*/
-#name {
-  color: white;
-  text-align: center;
-  font-family: Urbanist;
-  font-size: 50px;
-  font-weight: lighter;
-  justify-content: center;
-}
-
-.hr {
-  color: white;
-  size: 1px;
-}
-
-/* NAVBAR */
-.navbar {
-  background-color: rgba(0, 0, 0, 0.116); /* background color for visibility */
-  padding: 8px 0;
-}
-
-/*POSITIONING AND FORMATTING OF NAVBAR ITEMS*/
-.navbar ul {
-  list-style-type: none; /* no bullet points */
-  padding: 0;
-  margin: 0;
-  display: flex; /* Use flexbox for layout */
-  justify-content: center; /* Center items */
-  flex-wrap: wrap; /* enable wrapping */
-}
-
-.navbar li {
+.blog-title {
   position: relative;
-  margin: 0 15px; /* Space between items */
+  padding: 10vh 5vw 2rem 10vw;
+  font-family: 'Playfair Display', serif;
 }
 
-.navbar li a {
+.blog-title::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 5vw;
+  width: 1px;
+  height: 100vh;
+  background-color: black;
+}
+
+
+/* Blog grid layout */
+.blog-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.5rem;
+  padding: 3rem 10vw;
+  margin-top: 2rem;
+}
+
+/* Blog cards */
+.blog-card {
+  background-color: white;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  
+  /* Make entire card clickable, no text underline */
   display: block;
-  font-family: "Urbanist";
-  font-size: 20px;
-  color: white; /* Text color */
-  text-align: center;
-  padding: 10px 16px; /* Spacing around links */
-  text-decoration: none; /* Remove underline from links */
-  transition: color 0.3s; /* Smooth transition for hover effect */
+  color: #222;           /* Dark text */
+  text-decoration: none; /* Remove underline */
+  font-family: 'Inter', sans-serif;
+  font-size: 1.2rem;
+  user-select: none;
 }
 
-.navbar li a:hover {
-  color: lightgreen;
+.blog-card:hover {
+  background-color: #f0f0f0;
+  text-decoration: none; /* Still no underline on hover */
+  color: #111;           /* Slightly darker on hover */
 }
 
-.navbar li a::after {
-  content: ""; /* Required for the pseudo-element */
+
+.post-title {
+  font-family: "Playfair Display", serif;
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.post-date {
+  font-family: "Inter", sans-serif;
+  font-size: 0.9rem;
+  color: #444;
+  margin-bottom: 2rem;
+}
+/* Add padding and max-width around the blog post content */
+.post-content {
+  max-width: 800px;
+  margin: 0 auto;
+  line-height: 22px;;
+  font-family: 'Inter', sans-serif;
+}
+
+/* Wrap the entire post content and back link in a container for spacing */
+.post-wrapper {
+  max-width: 800px;
+  margin: 10vh auto 5vh auto;
+  padding: 0 2rem;
+}
+
+/* Style and enhance the back button */
+.back-link {
+  display: inline-block;
+  margin: 3rem 0 1rem;
+  padding: 0.6rem 1.2rem;
+  background-color: #b1b1b1;
+  color: #FFF;
+  border-radius: 8px;
+  text-decoration: none;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.95rem;
+  transition: background-color 0.3s ease;
+}
+
+.back-link:hover {
+  background-color: #696969;
+}
+
+/* Add a subtle horizontal line under the post title */
+.post-title {
+  position: relative;
+  padding-bottom: 0.5rem;
+}
+
+.post-title::after {
+  content: "";
   position: absolute;
   left: 0;
-  right: 0;
   bottom: 0;
-  height: 2px;
-  background-color: lightgreen; /* Color of the underline */
-  transform: scaleX(0); /* Start with no width */
-  transition: transform 0.3s ease; /* Smooth transition for the width */
-}
-
-.navbar li a:hover::after {
-  transform: scaleX(1); /* Expand to full width on hover */
-}
-
-/*BLOG FORMATTING*/
-.blogs {
-  text-align: center;
-  max-width: 700px;
-  margin: 10px auto;
-}
-
-.blog-description {
-  background-color: rgba(36, 67, 36, 0.319);
-  box-shadow: 6px 6px 10px rgba(0, 0, 0, 0.1);
-  padding: 10px;
-  margin-bottom: 20px;
-  transition: background-color 0.5s;
-}
-
-.blog-description:hover {
-  background-color: rgb(36, 67, 36);
-}
-
-.post-links {
-  color: rgb(136, 238, 150);
-  font-family: "Urbanist";
-  font-size: 24px;
-  font-weight: light;
-  text-align: center;
-  text-decoration: none;
-  transition: color 0.3s;
-}
-
-.blog-description p {
-  color: rgb(134, 206, 144);
-  font-family: "Urbanist";
-  font-size: 20px;
-  text-align: center;
-  font-weight: lighter;
-}
-
-.post-links:hover {
-  color: whitesmoke;
-}
-
-/*TROUBLESHOOT*/
-/*BLOG TEXT*/
-#blog-post {
-  color: whitesmoke;
-  font-family: "Urbanist";
-  text-align: left;
-  justify-content: center;
-  line-height: 20px;
-  max-width: 800px;
-  padding-top: 50px;
-  padding-left: 25%;
-  padding-right: 25%;
-}
-
-/* FOOTER */
-footer {
-  text-align: center;
-  font-family: "Urbanist";
-  color: gainsboro;
-  padding-top: 20rem;
+  width: 100px;
+  height: 1px;
+  background-color: #0A3D21;
+  border-radius: 2px;
 }

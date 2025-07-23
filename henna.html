@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Henna Art</title>
+  <link rel="stylesheet" href="css/art.css"/>
+  <link rel="stylesheet" href="styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter&family=Playfair+Display&display=swap" rel="stylesheet" />
+</head>
+<body>
+   <div id="navbar-container"></div>
+   <script src="js/navbar.js"?></script>
+
+  <div class="container">
+    <div class="title-section">
+      <h1>HENNA ART</h1>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ornare nulla non elit eleifend, a tempus ipsum laoreet.</p>
+    </div>
+
+    <div class="carousel-container">
+      <button class="arrow left" id="scrollLeft">&#10094;</button>
+      <div class="carousel" id="carousel">
+        <!-- <div class="carousel-item">
+            <img src="images/henna1.jpg"/>
+        </div> -->
+        <div class="carousel-item"></div>
+        <div class="carousel-item"></div>
+        <div class="carousel-item"></div>
+        <div class="carousel-item"></div>
+      </div>
+      <button class="arrow right" id="scrollRight">&#10095;</button>
+    </div>
+  </div>
+
+  <script>
+    const carousel = document.getElementById("carousel");
+    const scrollAmount = 220;
+
+    // Enable horizontal scroll with mouse wheel
+    carousel.addEventListener('wheel', (e) => {
+      e.preventDefault(); // Stop vertical scroll
+      carousel.scrollBy({
+        left: e.deltaY < 0 ? -scrollAmount : scrollAmount,
+        behavior: 'smooth'
+      });
+    });
+
+
+    document.getElementById("scrollLeft").addEventListener("click", () => {
+      carousel.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
+    });
+
+    document.getElementById("scrollRight").addEventListener("click", () => {
+      carousel.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+    });
+  </script>
+</body>
+</html>

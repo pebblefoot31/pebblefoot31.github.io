@@ -1,70 +1,105 @@
-/*Navbar*/
-#navi {
-    list-style-type: none;
-    text-align: center;
-    overflow: hidden;
-    position: sticky;
-    width: 100%;
-    font-family: Comfortaa;
-    font-size: 20px;
-    display: flex;
-    list-style-type: none;
-    justify-content: center;
-    flex-wrap: wrap;
-  }
-  
-  li {
-    float: center;   
-  }
-  
-  li a {
-    display: block;
-    color: white;
-    text-align: center;
-    padding: 14px 16px;
-  }
-  /*end Navbar*/
-
-
-body {
-    background-image: url(images/bg.jpg);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-  }
-  
-  .name {
-    color: white;
-    text-align: left;
-    font-family: Comfortaa;
-    font-size: 30px;
-    font-weight: 900;
-    white-space: pre;
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
+body {
+  background-color: #003116;
+  font-family: 'Inter', sans-serif;
+}
+
+/* Title and Paragraph */
+.title-section {
+  margin-top: 12vh;
+  color: white;
+  padding-left: 5vw;
+  padding-right: 5vw;
+  max-width: 800px;
+  text-align: left;
+}
+
+.title-section h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.5rem;
+  letter-spacing: 2px;
+}
+
+.title-section p {
+  color: #CDFFE3;
+  font-size: 0.95rem;
+  margin-top: 1rem;
+  max-width: 600px;
+  margin-right: 5vw;
+  text-align: left;
+  line-height: 1.6;
+}
+
+/* Carousel Styles */
+.carousel-container {
+  position: relative;
+  margin: 3rem auto;
+  width: 90%;
+  max-width: 1000px;
+  overflow: hidden;
+}
+
+.carousel {
+  display: flex;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  padding: 1rem 0;
+  gap: 1rem;
   
-  .hr {
-    color: white;
-    size: 1px;
-  }
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.carousel::-webkit-scrollbar {
+  display: none;
+}
+
+.carousel-item {
+  min-width: 200px;
+  height: 300px;
+  flex-shrink: 0;
+  border-radius: 8px;
+  overflow: hidden;
+  background-color: #D9D9D9; /* fallback background */
+}
+
+.carousel-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
 
 
-  p {
-    font-family: Comfortaa;
-    font-size: 20px;
-    line-height: 32px;
-    padding-top: 200px;
-    margin-left:500px;
-    margin-right: 500px;
-    text-align: justify;
-    color: white;
-  }
- 
+/* Arrows */
+.arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(255, 255, 255, 0.2);
+  color: white;
+  border: none;
+  font-size: 2rem;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  z-index: 1;
+  transition: background 0.3s ease;
+}
 
-  #footer {
-    text-align: center;
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    color: gainsboro;
-    padding-top: 250px;
-  }
-  
+.arrow:hover {
+  background-color: rgba(255, 255, 255, 0.4);
+}
+
+.arrow.left {
+  left: -10px;
+}
+
+.arrow.right {
+  right: -10px;
+}

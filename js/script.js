@@ -1,7 +1,7 @@
 const blogPosts = {
   1: {
     title: "my first internship",
-    date: "ddd",
+    date: "11/20/24",
     content: `SULI at Lawrence Berkeley National Laboratory: 
           "In winter of 2023, I reached out to a research group involved in a project of my interest at my top lab preference through a brief email expressing interest. Soon after, I received a response from their group lead, virtually met with 
             my mentor, and before I knew it- I was booking a flight to California for my first
@@ -32,22 +32,22 @@ const blogPosts = {
   },
   2: {
     title: "how to gym",
-    date: "ddd",
+    date: "---",
     content: "Under construction. Will be up soon!",
   },
   3: {
     title: "art is life",
-    date: "ddd",
+    date: "---",
     content: "Under construction. Will be up soon!",
   },
   4: {
     title: "writing emails",
-    date: "ddd",
+    date: "---",
     content: "Under construction. Will be up soon!",
   },
   5: {
     title: "my first part-time job",
-    date: "ddd",
+    date: "---",
     content: "Under construction. Will be up soon!",
   },
 };

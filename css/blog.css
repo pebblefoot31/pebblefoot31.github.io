@@ -6,7 +6,11 @@ body {
 .blog-title {
   position: relative;
   padding: 10vh 5vw 2rem 10vw;
+}
+
+.blog-title h1 {
   font-family: 'Playfair Display', serif;
+  font-size: 45px;
 }
 
 .blog-title::before {
@@ -43,7 +47,7 @@ body {
   color: #222;           /* Dark text */
   text-decoration: none; /* Remove underline */
   font-family: 'Inter', sans-serif;
-  font-size: 1.2rem;
+  font-size: 20px;
   user-select: none;
 }
 

@@ -1,160 +1,79 @@
-body {
-  background-color: rgb(44, 83, 44);
-  background-position: center;
-  background-size: cover;
+/* About Page Layout */
+.about-container {
+  display: flex;
+  min-height: 100vh;
+  width: 100%;
 }
 
-/*NAME*/
-#name {
-  color: white;
-  text-align: center;
-  font-family: Urbanist;
-  font-size: 50px;
-  font-weight: lighter;
-  justify-content: center;
-}
-
-.hr {
-  color: white;
-  size: 1px;
-}
-
-/* NAVBAR */
-.navbar {
-  background-color: rgba(0, 0, 0, 0.116); /* background color for visibility */
-  padding: 8px 0;
-}
-
-/*POSITIONING AND FORMATTING OF NAVBAR ITEMS*/
-.navbar ul {
-  list-style-type: none; /* no bullet points */
-  padding: 0;
-  margin: 0;
-  display: flex; /* Use flexbox for layout */
-  justify-content: center; /* Center items */
-  flex-wrap: wrap; /* enable wrapping */
-}
-
-.navbar li {
+.about-left {
+  flex: 1;
+  background-color: #D9D9D9;
+  padding: 4rem 6vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
   position: relative;
-  margin: 0 15px; /* Space between items */
 }
 
-.navbar li a {
-  display: block;
-  font-family: "Urbanist";
-  font-size: 20px;
-  color: white; /* Text color */
-  text-align: center;
-  padding: 10px 16px; /* Spacing around links */
-  text-decoration: none; /* Remove underline from links */
-  transition: color 0.3s; /* Smooth transition for hover effect */
-}
-
-.navbar li a:hover {
-  color: lightgreen;
-}
-
-.navbar li a::after {
-  content: ""; /* Required for the pseudo-element */
+.about-left::before {
+  content: "";
   position: absolute;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  height: 2px;
-  background-color: lightgreen; /* Color of the underline */
-  transform: scaleX(0); /* Start with no width */
-  transition: transform 0.3s ease; /* Smooth transition for the width */
+  top: 0;
+  left: 5vw;
+  width: 1px;
+  height: 100%;
+  background-color: black;
 }
 
-.navbar li a:hover::after {
-  transform: scaleX(1); /* Expand to full width on hover */
+.about-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.5rem;
+  margin-bottom: 4rem;
+  margin-top: 20vh;
+  color: #0A3D21;
 }
 
-.hr {
-  color: white;
-  size: 1px;
+.about-block {
+  margin-bottom: 2.5rem;
+  max-width: 600px;
 }
 
-.focused-section h2 {
-  color: rgba(255, 255, 255, 0.595);
-  text-align: left;
-  font-family: "Urbanist";
-  font-weight: light;
-  font-weight: 1000;
-  font-size: 40px;
+.about-subtitle {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.5rem;
+  margin-bottom: 0.8rem;
+  color: #0A3D21;
 }
 
-/* HOBBIES CAPTION */
-
-/* CAREER CAPTION */
-.focused-section {
-  color: whitesmoke;
-  font-weight: light;
-  font-family: "Urbanist";
-  font-size: 22px;
-  text-align: left;
-  max-width: 800px; /* Set the maximum width for the container */
-  padding: 20px; /* Add padding for space inside */
-  margin: 0 auto; /* Center the container on the page */
-  background-color: rgba(36, 67, 36, 0.319);
-  box-shadow: 6px 6px 10px rgba(0, 0, 0, 0.1);
-  line-height: 1.75; /* for readability */
+.about-text {
+  font-family: 'Inter', sans-serif;
+  font-size: 1rem;
+  color: #222;
+  line-height: 1.6;
 }
 
-/*
-
-#prof {
-  width: 230px;
-  height: auto;
-  float: left;
-  margin: 15px;
-  border-radius: 15px;
-  border-color: white;
+.about-right {
+  flex: 1;
+  background-color: #003116;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 4rem 3vw;
 }
 
-#pone {
-  text-align: left;
-  font-family: "Urbanist";
-  font-size: 20px;
-  color: white;
-  line-height: 32px;
-  padding-left: 300px;
-  padding-right: 300px;
-  float: right;
+.image-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 1.5rem;
+  width: 80%;
+  max-width: 400px;
 }
 
-#art {
-  color: white;
-  text-align: left;
-  padding-top: 350px;
-  padding-left: 300px;
-  font-family: Comfortaa;
-  font-weight: 1000;
-  font-size: 40px;
-}
-
-#pictwo {
-  width: 250px;
-  height: 410px;
-  float: right;
-  margin: 15px;
-  border-radius: 15px;
-  border-color: white;
-}
-
-#hennapic {
-  width: 240px;
-  height: 400px;
-  float: left;
-  margin: 15px;
-  border-radius: 15px;
-  border-color: white;
-}*/
-
-footer {
-  text-align: center;
-  font-family: Georgia, "Times New Roman", Times, serif;
-  color: gainsboro;
-  padding-top: 15rem;
+.image-placeholder {
+  width: 100%;
+  padding-top: 100%;
+  background-color: #0A3D21;
+  border: 2px dashed #CDFFE3;
+  border-radius: 8px;
 }

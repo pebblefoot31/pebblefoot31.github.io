@@ -20,7 +20,7 @@ body {
   padding: 1rem 2rem;
   position: sticky;
   top: 0;
-  z-index: 10;
+  z-index: 1000;
 }
 
 .nav-left a {
@@ -40,6 +40,99 @@ body {
   font-family: 'Inter', sans-serif;
 }
 
+/* Hamburger Menu */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  padding: 5px;
+}
+
+.hamburger span {
+  width: 25px;
+  height: 3px;
+  background-color: white;
+  margin: 3px 0;
+  transition: 0.3s;
+  border-radius: 2px;
+}
+
+/* Sidebar */
+.sidebar {
+  position: fixed;
+  top: 0;
+  right: -300px;
+  width: 300px;
+  height: 100vh;
+  background-color: #0A3D21;
+  transition: right 0.3s ease;
+  z-index: 1001;
+  display: flex;
+  flex-direction: column;
+}
+
+.sidebar.active {
+  right: 0;
+}
+
+.sidebar-header {
+  display: flex;
+  justify-content: flex-end;
+  padding: 1rem;
+}
+
+.close-btn {
+  font-size: 2rem;
+  color: white;
+  cursor: pointer;
+  background: none;
+  border: none;
+  padding: 0;
+  line-height: 1;
+}
+
+.sidebar-links {
+  display: flex;
+  flex-direction: column;
+  padding: 2rem 1rem;
+  gap: 1.5rem;
+}
+
+.sidebar-links a {
+  color: #CDFFE3;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 1.2rem;
+  font-weight: lighter;
+  font-family: 'Inter', sans-serif;
+  padding: 0.5rem 0;
+  border-bottom: 1px solid rgba(205, 255, 227, 0.2);
+  transition: color 0.3s ease;
+}
+
+.sidebar-links a:hover {
+  color: white;
+}
+
+/* Overlay */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 999;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.overlay.active {
+  opacity: 1;
+  visibility: visible;
+}
+
 /* Captions under intro line */
 .intro-captions {
   /* margin-top: 1rem; */
@@ -50,6 +143,7 @@ body {
   font-size: 25px;
   color: black;
   margin: 0.3rem 0;
+  max-width: 500px;
 }
 
 /* Social links container */
@@ -118,10 +212,33 @@ body {
   align-items: center;
 }
 
-/* Ellipse Shape */
-.ellipse {
-  background-color: #0A3D21;
-  width: 195px;
-  height: 314px;
-  border-radius: 50% / 50%;
+.hero-right img {
+  width: 500px;
+  height: auto;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .hamburger {
+    display: flex;
+  }
+  
+  .nav-right {
+    display: none;
+  }
+  
+  .navbar {
+    padding: 1rem;
+  }
+  
+  .nav-left a {
+    font-size: 1.3rem;
+  }
+}
+
+@media (min-width: 769px) {
+  .sidebar,
+  .overlay {
+    display: none !important;
+  }
 }

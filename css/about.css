@@ -8,7 +8,7 @@
 .about-left {
   flex: 1;
   background-color: #D9D9D9;
-  padding: 4rem 6vw;
+  padding: 4rem 10vw;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -29,13 +29,13 @@
   font-family: 'Playfair Display', serif;
   font-size: 2.5rem;
   margin-bottom: 4rem;
-  margin-top: 20vh;
-  color: #0A3D21;
+  margin-top: 5vh;
+  color: black;
 }
 
 .about-block {
   margin-bottom: 2.5rem;
-  max-width: 600px;
+  max-width: 1000px;
 }
 
 .about-subtitle {
@@ -61,7 +61,7 @@
   padding: 4rem 3vw;
 }
 
-.image-grid {
+/* .image-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(2, 1fr);
@@ -77,3 +77,68 @@
   border: 2px dashed #CDFFE3;
   border-radius: 8px;
 }
+ */
+
+/* Book List Styling */
+.book-list {
+  background: #f8f9fa5d;
+  border-radius: 1rem;
+  padding: .5rem .5rem;
+  margin: 2rem 0;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+  list-style: none;
+  max-width: 300px;
+}
+
+.book-list li {
+  font-family: 'Inter', sans-serif;
+  font-size: 1.08rem;
+  color: #222;
+  padding: 0.7rem 1rem;
+  margin-bottom: 0.5rem;
+  border-radius: 0.5rem;
+  transition: background 0.2s, color 0.2s;
+  display: flex;
+  align-items: flex-start;
+  gap: 0.1rem;
+  font-style: italic;
+  flex-direction: column;
+  position: relative;
+}
+
+.book-list li a {
+  text-decoration: none;
+  color: inherit;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.book-list li a:hover {
+  color: #0A3D21;
+}
+
+.book-list li::before {
+  content: "★";
+  font-size: 1.1rem;
+  margin-right: 0.5rem;
+  color: #111;
+  opacity: 0.85;
+  font-style: normal;
+  align-self: flex-start;
+  margin-top: 0;
+  margin-bottom: 0.1rem;
+}
+
+.book-author {
+  display: block;
+  font-size: 0.92rem;
+  color: #888;
+  font-weight: 400;
+  margin-top: 0.15rem;
+  font-style: normal;
+  letter-spacing: 0.01em;
+  margin-left: 0;
+}
+
+

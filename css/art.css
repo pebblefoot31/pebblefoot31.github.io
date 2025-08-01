@@ -11,19 +11,12 @@ body {
 }
 
 /* Title and Paragraph */
-.container {
-  width: 100%;
-  max-width: 1500px;
-  margin: 0 auto;
-  padding: 0 2vw;
-}
-
 .title-section {
   margin-top: 12vh;
   color: white;
   padding-left: 8vw;
   padding-right: 5vw;
-  width: 100%;
+  max-width: 1500px;
   text-align: left;
 }
 
@@ -38,8 +31,7 @@ body {
   font-size: 20px;
   font-family: 'Inter', sans-serif;
   margin-top: 1rem;
-  width: 1500px;
-  margin-right: 5vw;
+  max-width: 1000px;
   text-align: left;
   line-height: 1.6;
 }
@@ -99,4 +91,11 @@ body {
 .arrow:hover {
   background-color: rgba(255, 255, 255, 0.4);
 }
+
+@media (max-width: 768px) {
+  .title-section p {
+    max-width: 500px;
+  }
+}
+
 

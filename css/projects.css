@@ -18,7 +18,7 @@ body {
   font-family: 'Playfair Display', serif;
   font-size: 3rem;
   text-align: left;
-  margin-bottom: 3rem;
+  margin-bottom: 2rem;
   color: black;
   font-weight: 700;
 }
@@ -26,23 +26,45 @@ body {
 
 .projects-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+  grid-template-columns: repeat(3, minmax(450px, 1fr));
   gap: 2rem;
 }
 
 .project-card {
+  display: flex;
+  align-items: flex-start;
   background: white;
   border-radius: 12px;
   padding: 2rem;
+  gap: 1rem;
+  flex-direction: column;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   border: 1px solid #e9ecef;
+}
+
+.project-main {
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
 }
 
 .project-card:hover {
   transform: translateY(-5px);
   box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
 }
+
+.project-thumbnail {
+  width: 200px;
+  height: 200px;
+  border-radius: 12px;
+  gap: 1rem;
+}
+
+.projects-content {
+  flex: 1;
+}
+
 
 .project-title {
   font-family: 'Playfair Display', serif;
@@ -116,6 +138,10 @@ body {
     padding: 1rem;
   }
   
+  .project-thumbnail {
+    width: 100px;
+    height: 100px;
+  }
   .project-title {
     font-size: 1.3rem;
   }

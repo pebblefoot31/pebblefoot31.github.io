@@ -104,6 +104,18 @@ body {
   .title-section p {
     max-width: 500px;
   }
+
+  .carousel-item {
+    height: auto;          
+    max-width: 75px;      
+    max-height: 250px;
+  }
+
+  .carousel-item img {
+    height: 100%;          
+    width: 100%;
+    object-fit: contain;  
+  }
 }
 
 

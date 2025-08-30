@@ -5,18 +5,29 @@ body {
   background-color: #D9D9D9;
   font-family: 'Inter', sans-serif;
   color: #333;
+  margin-bottom: 100px;
+}
+
+.projects-container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 5vw;
+  width: 1px;
+  height: 120%;
+  background-color: black;
 }
 
 .projects-container {
   max-width: 1200px;
   margin-top: 5rem;
-  padding-left: 8vw;
+  padding-left: 10vw;
 }
 
 
 .projects-title {
   font-family: 'Playfair Display', serif;
-  font-size: 3rem;
+  font-size: 2.5rem;
   text-align: left;
   margin-bottom: 2rem;
   color: black;
@@ -108,10 +119,10 @@ body {
   border: 1px solid #c3e6c3;
 }
 
-/* Responsive Design */
 @media (max-width: 768px) {
   .projects-container {
     padding: 1rem;
+    max-width:fit-content;
   }
   
   .projects-title {
@@ -126,6 +137,12 @@ body {
   
   .project-card {
     padding: 1.5rem;
+  }
+}
+
+@media (max-width: 825px) {
+  .projects-container::before {
+    display: none;
   }
 }
 

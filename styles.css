@@ -134,11 +134,6 @@ body {
   visibility: visible;
 }
 
-/* Captions under intro line */
-.intro-captions {
-  /* margin-top: 1rem; */
-}
-
 .caption {
   font-family: 'Inter', sans-serif;
   font-size: 25px;

@@ -155,9 +155,9 @@
 
 @media(max-width: 1550px) {
   .image-grid {
-    grid-template-columns: 1fr; /* One column */
-    width: 90%;                 /* Optional: wider on small screens */
-    margin: 0 auto;             /* Center the grid */
+    grid-template-columns: 1fr; 
+    width: 90%;                 
+    margin: 0 auto;             
   }
 }
 
@@ -168,13 +168,12 @@
 }
 
 .mobile-about-img {
-  display: none;              /* Hidden by default */
+  display: none;              
   width: 80%;
   margin-bottom: 2rem;
   border-radius: 8px;
 }
 
-/* ✅ Only show on small screens */
 @media (max-width: 722px) {
   .mobile-about-img {
     display: block;

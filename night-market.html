@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Henna Gallery | 865 Night Market</title>
+    <style>
+        /* Base Styles */
+        body {
+            background: linear-gradient(135deg, #3f1a4f 0%, #14006f 100%);
+            background-attachment: fixed; /* Keeps the gradient from stretching/breaking as you scroll */
+            margin: 0;
+            padding: 20px;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            color: white;
+        }
+
+        h1, h2 {
+            font-family: 'Playfair Display', serif;
+            color: #ffffff;
+            text-align: center;
+            margin: 10px 0;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            letter-spacing: 2px;
+            margin-top: 30px;
+            margin-bottom: 20px;
+        }
+
+        h2 {
+            font-size: 1.5rem;
+            font-weight: 400;
+            font-style: italic; /* Makes it feel even 'more' serif/elegant */
+            margin-bottom: 20px;
+        }
+
+        hr {
+            width: 85%;
+            margin-left: auto;
+            margin-right: auto;
+            border: 0;
+            border-top: 1px solid rgba(255, 255, 255, 0.3); /* Subtle white line */
+            margin-bottom: 20px;
+        }
+
+        /* Star Alignment Wrapper */
+        .title-wrap {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 15px;
+            margin-bottom: 20px; /* Matches your H2 margin preference */
+        }
+        
+        .star {
+            font-size: 1.4rem; /* Adjusted to match the larger H2 size */
+            color: #ffffff;
+            text-shadow: 0 0 8px rgba(255, 255, 255, 0.4);
+            line-height: 1;
+        }
+        /* The Grid - Mobile Friendly (2 columns) */
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 12px;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* Image Cards */
+        .image-card {
+            width: 100%;
+            aspect-ratio: 1 / 1;
+            overflow: hidden;
+            border-radius: 12px;
+            cursor: pointer;
+            background-color: rgba(255, 255, 255, 0.05);
+            transition: transform 0.2s ease;
+        }
+
+        .image-card:active {
+            transform: scale(0.96); /* Visual feedback when tapped */
+        }
+
+        .image-card img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        /* Lightbox Overlay */
+        #lightbox {
+            display: none;
+            position: fixed;
+            z-index: 9999;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.9);
+            justify-content: center;
+            align-items: center;
+            cursor: zoom-out;
+        }
+
+        #lightbox-img {
+            max-width: 90%;
+            max-height: 85%;
+            border-radius: 8px;
+            box-shadow: 0 0 30px rgba(0,0,0,0.5);
+            cursor: default;
+        }
+
+        /* Close Button */
+        #close-btn {
+            position: absolute;
+            top: 15px;
+            right: 20px;
+            color: white;
+            font-size: 35px;
+            line-height: 1;
+            cursor: pointer;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>865 Night Market </h1>
+    <hr>
+    <div class="title-wrap">
+        <span class="star">✧</span>
+        <h2>Henna Designs Gallery</h2>
+        <span class="star">✧</span>
+    </div>
+
+    <div class="gallery-grid" id="gallery"></div>
+
+    <div id="lightbox">
+        <span id="close-btn">&times;</span>
+        <img id="lightbox-img" src="" alt="Enlarged view">
+    </div>
+
+    <script>
+        // Your specific image list
+        const imageFiles = [
+            'henna1.jpeg', 'henna2.jpeg', 'henna3.jpeg', 'henna4.jpeg',
+            'henna5.jpeg', 'henna6.jpeg', 'henna7.jpeg', 'henna8.jpeg',
+            'henna9.jpeg', 'henna10.jpeg', 'henna11.jpeg', 'henna12.jpeg',
+            'henna13.jpeg', 'henna14.jpeg', 'henna15.jpeg', 'henna16.jpeg'
+        ];
+
+        const folderPath = 'night-market/';
+        const gallery = document.getElementById('gallery');
+        const lightbox = document.getElementById('lightbox');
+        const lightboxImg = document.getElementById('lightbox-img');
+        const closeBtn = document.getElementById('close-btn');
+
+        // Create the grid items
+        imageFiles.forEach(file => {
+            const card = document.createElement('div');
+            card.className = 'image-card';
+            
+            const img = document.createElement('img');
+            img.src = folderPath + file;
+            img.loading = "lazy"; // Saves data for mobile users
+            
+            card.onclick = () => {
+                lightboxImg.src = folderPath + file;
+                lightbox.style.display = 'flex';
+                document.body.style.overflow = 'hidden'; // Prevents background scrolling
+            };
+
+            card.appendChild(img);
+            gallery.appendChild(card);
+        });
+
+        // Close logic
+        function hideLightbox() {
+            lightbox.style.display = 'none';
+            document.body.style.overflow = 'auto';
+        }
+
+        closeBtn.onclick = hideLightbox;
+        
+        // Close if clicking outside the image
+        lightbox.onclick = (e) => {
+            if (e.target !== lightboxImg) {
+                hideLightbox();
+            }
+        };
+    </script>
+</body>
+</html>
